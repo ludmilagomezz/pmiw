@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sumergite en esta Aventura gráfica Interactiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estetica.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="py-md-4 py-sm-2 text-center" id="volver"> Sumergite en esta Aventura gráfica Interactiva</h1>
+        <nav class="navbar py-2">
+            <form class="container-fluid justify-content-center ">
+                <button class="btn me-2" type="button"><a href="#link1">¿De qué trata esta
+                        aventura?</a></button>
+                <button class="btn me-2" type="button"><a href="#link2">Diseño visual</a></button>
+                <button class="btn me-2" type="button"><a href="#link3">Proceso de
+                        programación</a></button>
+            </form>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 gy-md-5 gy-sm-2 text-center">
+                <h4>¿Quién soy?</h4>
+                <p>Mi nombre es Ludmila Gómez y a continuación voy a contar sobre mi trabajo práctico de
+                    programación, realizado junto a mi compañera Melani Bello, para la materia Programación para medios
+                    interactivos orientada a las tecnologías web.</p>
+                <p>
+                    El propósito de este proyecto fue aprender a usar arreglos, funciones con parámetros, imágenes y
+                    sonido dentro de p5*js, Processing.</p>
+            </div>
+            <div class="col-md-6 col-sm-12 gy-md-4 gy-sm-2">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="fotosPaginaWeb/foto1.png" class="img-fluid" alt="imagen del trabajo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="fotosPaginaWeb/foto2.png" class="img-fluid" alt="imagen del trabajo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="fotosPaginaWeb/foto3.png" class="img-fluid" alt="imagen del trabajo">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 gy-md-4 gy-sm-2">
+                <div class="card mb-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h4 class="card-title" id="link1">¿De qué trata esta aventura?</h4>
+                                <p class="card-text">A primera vista, este trabajo es una aventura gráfica en la que el
+                                    usuario se sumerge e interactúa con diferentes situaciones. A lo largo del recorrido
+                                    deberá tomar decisiones que definirán el desarrollo y el final de la historia, ya
+                                    que existen múltiples caminos posibles.
+                                    Para comenzar, plantemos el diagrama:
+                                    ¿De qué va a tratar mi aventura?¿Cuántos finales va a tener?¿Qué decisiones deben
+                                    tomarse?
+                                    Para la temática del juego elegimos un cuento de Ray Bradbury llamado "El Dragón",
+                                    brevemente trata sobre dos caballeros en busca de una bestia nocturna que atormenta
+                                    a dos pueblos vecinos.
+                                    A partir de esa historia creamos cuatro finales alternativos y luego redactamos
+                                    todas las pantallas para asegurarnos de que la narrativa fluya y todos los caminos
+                                    posibles tengan coherencia.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="fotosPaginaWeb/RayBradbury.jpg" class="img-fluid" alt="logoProcessing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 gy-md-3 gy-sm-2">
+                <div class="card mb-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h4 class="card-title" id="link2">Diseño visual</h4>
+                                <p class="card-text">Una vez que definimos bien la historia, empezamos a pensar en las
+                                    imágenes que íbamos a necesitar. Para la ambientación, sugerimos que la aventura se
+                                    sitúe en un páramo desierto, lo que le da un toque más dramático al cuento.
+                                    Además, mantuvimos la temática de las épocas medievales con la aparición de los
+                                    caballeros y por supuesto, el dragón.
+
+                                    Esta combinación nos ayudó a darle un estilo visual único al proyecto. Con nuestro
+                                    diagrama narrativo completo y la temática elegida, le pedimos a la IA Gemini que
+                                    genere las imágenes necesarias para cada escena , asegurando que todas tuvieran el
+                                    mismo estilo.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="fotosPaginaWeb/fondo6.png" class="img-fluid" alt="logoProcessing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 gy-md-3 gy-sm-2">
+                <div class="card mb-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h4 class="card-title" id="link3">Proceso de programación</h4>
+                                <p class="card-text">Para no marearnos mucho con el código, vamos a hacerlo
+                                    resumido.
+                                    Comenzamos declarando variables para el sonido, los textos y los
+                                    estados. Insertamos las imágenes como un arreglo y las cargamos automáticamente con
+                                    un ciclofor dentro de la función preload().
+                                    Primero creamos una función propia para las pantallas (que contiene imagen y texto)
+                                    y otras funciones para dibujar botones y detectarlos. Una vez listas, podemos
+                                    comenzar a ordenarlas y darle sentido a la aventura.
+                                    Creamos las pantallas llamando a nuestras funciones de pantallas y botones asignando
+                                    que imagen, texto y botón debe tener cada una y donde; luego, les asignamos un
+                                    estado.
+                                    Una vez asignados los estados, utilizamos la función mousePressed y nuestra función
+                                    detectar botones para pasar entre estados cada vez que se hace click en un botón.
+                                    finalmente incorporamos el sonido a la aventura y con eso terminamos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="fotosPaginaWeb/logoProcessing.png" class="img-fluid" alt="logoProcessing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Boton modal -->
+
+            <button type="button" class="btn gy-md-2 gy-sm-2 col-5 mx-auto" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                ¡Participá de la aventura gráfica aca!
+            </button>
+
+            <!-- Modal -->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Aventura Gráfica</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="aventuraGrafica/tpfinalparte1/index.html" frameborder="0" width="100%"
+                                height="480"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1 col-sm-12 gy-md-4 gy-sm-2"></div>
+            <div class="col-md-10 col-sm-12 gy-md-3 gy-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <p> Gracias a este trabajo logramos entender mejor la lógica de programación en p5*js, explorar una
+                        temática narrativa propia y poner en juego nuestra creatividad para construir una aventura
+                        gráfica entretenida, con decisiones, caminos alternativos y un universo visual propio.</p>
+                        <div class="d-grid gap-2 col-3 mx-auto">
+                            <button class="btn" type="button"> <a href="#volver">Volver al inicio</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-1 col-sm-12 gy-md-4 gy-sm-2"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

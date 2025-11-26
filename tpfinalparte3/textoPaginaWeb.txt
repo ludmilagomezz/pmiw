@@ -1,0 +1,38 @@
+Sumergite en esta Aventura gráfica Interactiva
+
+¿Quién soy?
+Mi nombre es Ludmila Gomez y a continuación te voy a contar sobre mi trabajo práctico de programación, realizado junto a mi compañera Melani Bello, para la materia Programación para medios interactivos orientada a las tecnologías web.
+
+El propósito de este proyecto fue aprender a usar arreglos, funciones con parámetros, imágenes y sonido dentro de p5*js, Processing.
+
+(3 fotos carrusel) 
+
+¿De qué trata esta aventura?
+
+A primera vista, este trabajo es una aventura gráfica en la que el usuario se sumerge e interactúa con diferentes situaciones. A lo largo del recorrido deberá tomar decisiones que definirán el desarrollo y el final de la historia, ya que existen multiples caminos posibles.
+Para comenzar, plantemos el diagrama:
+¿De qué va a tratar mi aventura?¿Cuántos finales va a tener?¿Qué decisiones deben tomarse? 
+Para la temática del juego elegimos un cuento de Ray Bradbury llamado "El Dragon", brevemente trata sobre dos caballeros en busca de una bestia nocturna que atormenta a dos pueblos vecinos.
+A partir de esa historia creamos cuatro finales alternativos y luego redactamos todas las pantallas para asegurarnos de que la narrativa fluya y todos los caminos posibles tengan coherencia.
+
+Diseño visual
+
+Una vez definida la historia, comenzamos a trabajar en las imágenes que esta contiene. Manteniendo la temática del cuento, decidimos situar la aventura en un paramo desierto, en las épocas medievales, acompañado por los caballeros y la presencia del dragón..
+Con nuestro diagrama completo y la temática elegida, le pedimos a la IA Gemini que genere las imágenes necesarias para cada escena.
+
+Proceso de progracacion.
+
+Para explicarlo y no marearnos mucho con el código, vamos a hacerlo resumido.
+Comenzamos declarando variables para el sonido, los textos y los estados. Insertamos las imágenes como un arreglo, para no tener que cargar una por una dentro del function preload(), sino que con ayuda de un ciclo for las cargamos automaticamente.
+Primero creamos una función propia para las pantallas dentro de la cual definimos qué va a contener cada una de ellas, simplemente imagen y texto. Por otro lado creamos una función para dibujar botones y otra para detectarlos. Una vez que creamos las funciones necesarias, podemos comenzar a ordenarlas y darle sentido a la aventura. 
+Básicamente lo que hicimos fue crear las pantallas llamando a nuestras funciones de pantallas y botones, asignando que imagen, texto y botón debe tener cada una y donde. Cuando tuvimos nuestras pantallas definidas, les asignamos un estado.
+Una vez asignados los estados, utilizamos la función mousePressed y nuestra función detectar botones para pasar entre estados cada vez que se hace click en un botón. 
+finalmente incorporamos el sonido a la aventura y con eso terminamos. 
+
+(boton jugar)
+
+Conclusión 
+
+Gracias a este trabajo logramos entender mejor la lógica de programación en p5*js, explorar una temática narrativa propia y poner en juego nuestra creatividad para construir una aventura gráfica entretenida, con decisiones, caminos alternativos y un universo visual propio.
+
+¡Gracias por leer!
