@@ -1,0 +1,648 @@
+body{
+
+/*fondo degrade*/
+
+min-height: 100vh;
+margin: 0px;
+background: radial-gradient(circle, #ec407a, #8e24aa, #1a1a7e, #00897b);
+background-attachment: fixed;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.249);
+}
+
+.logo-marca{
+    margin: 0 30px;
+}
+
+
+.portada {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente bloque izquierdo y bloque derecho */
+  margin: 30px;
+  padding: 20px;
+}
+
+/* --- COLUMNA IZQUIERDA (Textos y Botón) --- */
+.izquierda-portada {
+  width: 45%;
+  display: flex;
+  flex-direction: column;   /* Alinea h1, h2 y botón uno abajo del otro nativamente */
+  align-items: flex-start;  /* Tira todo hacia la izquierda */
+  gap: 50px;                /* Controla la separación entre los elementos */
+}
+
+.izquierda-portada h1 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  color: white;
+  font-size: 80px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.izquierda-portada h2 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  color: white;
+  font-size: 26px; /* Bajado un toque para que no compita tanto con el h1 gigante */
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- COLUMNA DERECHA (Foto y Datos del evento) --- */
+.derecha-portada {
+  width: 50%;
+  display: flex;
+  flex-direction: row;      /* Foto al lado de los textos */
+  align-items: center;      /* Centra verticalmente la foto con los textos */
+  gap: 10px;                /* Espacio de separación real entre foto y textos */
+}
+
+.derecha-portada img {
+  width: 100%;
+  max-width: 500px;         /* Tamaño controlado para que no tape los textos */
+  height: auto;
+}
+
+.textos-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;                /* Separación parejita entre cada h3 */
+}
+
+.textos-derecha h3 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* --- BOTÓN DE LA PORTADA --- */
+.boton-portada-ir {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e6ff00; /* Amarillo flúor */
+  font-family: sans-serif;
+  color: black;
+  font-size: 24px;
+  padding: 15px 50px;
+  border-radius: 35px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;          /* Separación controlada respecto al h2 */
+  transition: transform 0.2s ease;
+}
+
+.boton-portada-ir:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.seccion-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
+}
+/* --- TÍTULO DE AFUERA DE LA CARD --- */
+.seccion-1 > h2 {
+  align-self: flex-start; 
+  color: white;
+  font-weight: lighter;
+  font-family: "Alfa Slab One", serif;
+  font-size: 35px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;    
+  margin-left: 2.5%;     /*ajustar titulo a tarjeta */
+}
+
+/* --- TARJETA  --- */
+.tarjeta-glass {
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  
+  display: flex;
+  flex-direction: column; /* Una fila arriba de la otra */
+  gap: 50px;             /* Separación entre la fila de arriba y la de abajo */
+  padding: 40px 40px;    /* Un poco más de padding arriba/abajo por los títulos */
+}
+
+/* --- ESTRUCTURA GENERAL DE LAS FILAS --- */
+.fila-tarjeta {
+  position: relative;    /* ¡CLAVE! Hace que los "absolute" de los títulos se midan desde acá adentro */
+  display: flex;
+  flex-direction: row;
+  align-items: center;   /* Centra verticalmente la foto y el texto */
+  width: 100%;
+  height: 250px;         /* Le damos una altura fija para poder usar "top" y "bottom" cómodamente */
+}
+
+/* --- FILA DE ARRIBA: Todo tirado a la derecha --- */
+.fila-arriba {
+  justify-content: flex-end; /* Empuja el texto y la foto a la derecha */
+  text-align: right;
+}
+.fila-arriba p, .fila-arriba img {
+  max-width: 35%;          /* Controlamos que no ocupen más de la mitad de la pantalla */
+  margin-left: 20px;       /* Separación entre el texto y la foto */
+}
+
+/* --- FILA DE ABAJO: Todo tirado a la izquierda --- */
+.fila-abajo {
+  justify-content: flex-start; /* Empuja la foto y el texto a la izquierda */
+}
+.fila-abajo img, .fila-abajo p {
+  max-width: 25%;
+  margin-right: 15px;      /* Separación entre la foto y el texto */
+}
+
+/* --- DISEÑO GENERAL DE IMÁGENES Y TEXTOS --- */
+.tarjeta-glass img { height: 100%; width: auto; border-radius: 20px; object-fit: cover; }
+.tarjeta-glass p { color: white;  font-family: sans-serif; font-size: 20px; }
+.tarjeta-glass h2 { color: white; font-family: "Alfa Slab One", serif; font-size: 35px; font-weight: lighter; margin: 0; text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-sumate {
+  position: absolute;
+  top: 90px;        /* Cambiá este número para subirlo o bajarlo */
+  left: 190px;       /* Cambiá este número para moverlo a la izquierda o derecha */
+}
+
+.titulo-final {
+  position: absolute;
+  bottom: 100px;     /* Lo medimos desde abajo para que sea más fácil */
+  right: 50px;      /* Lo medimos desde la derecha para acomodarlo al final */
+}
+
+
+
+
+.seccion-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centra el título de la sección y el párrafo de abajo */
+  margin: 30px 0;         /* ¡CORREGIDO! 0 a los costados para usar todo el ancho de la pantalla */
+  padding: 20px;
+  width: 100%;            /* Fuerza a la sección a expandirse horizontalmente */
+  box-sizing: border-box; /* Evita que el padding rompa el ancho total */
+}
+
+/* Título principal de afuera */
+.seccion-2 .titulo-seccion {
+  align-self: flex-start;  /* Se alinea a la izquierda como en tu diseño */
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-weight: lighter;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;      /* Pequeño margen para que no pegue al borde absoluto */
+}
+
+/* --- FILA CONTENEDORA DE LAS TARJETAS --- */
+.disposicion-tarjetas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribuye el espacio entre las 3 de forma pareja */
+  width: 100%;            /* Ocupa el 100% de la sección liberada */
+  gap: 30px;              /* Distancia exacta entre tarjeta y tarjeta */
+  margin-bottom: 40px;    /* Separa las tarjetas del texto de menores de abajo */
+  padding: 0 20px;        /* Margen interno para que no toquen los bordes del monitor */
+  box-sizing: border-box;
+}
+
+/* --- ESTILO ÚNICO PARA LAS 3 TARJETAS --- */
+.tarjeta-evento {
+  flex: 1;                /* ¡CORREGIDO! Obliga a las 3 a estirarse a lo ancho por igual */
+  height: 450px;          /* Mantiene el alto que a vos te funcionó bien */
+  
+  background: rgba(255, 255, 255, 0.15); /* Estilo Glassmorphism */
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  /* Flexbox vertical interno para centrar el contenido de cada card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinea los textos a los extremos y la foto al centro */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Control de las imágenes dentro de las tarjetas */
+.tarjeta-evento img {
+  width: 160px;           /* Tamaño ideal para que entren bien los dos textos */
+  height: auto;
+}
+
+/* --- CONTROL INDEPENDIENTE DE TEXTOS DENTRO DE LAS CARDS --- */
+
+/* ¿Fecha?, ¿Hora?, ¿Lugar?) */
+.pregunta-tarjeta {
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-size: 28px;      
+  font-weight: lighter;  
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* Sábado 18, 16:00hs, parque */
+.respuesta-tarjeta {
+  font-family: "Alfa Slab One", serif; 
+  color: white;
+  font-size: 22px;      
+  font-weight: lighter;  
+  text-align: center;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* --- PÁRRAFO DE MENORES (ABAJO Y CENTRADO) --- */
+.aclaracion-menores {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+/* --- CONTENEDOR GENERAL (Igualado a la Sección 2) --- */
+.seccion-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titulo-seccion-3 {
+  align-self: flex-start;
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.tarjeta-glass-videos {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  display: flex;
+  flex-direction: row;     
+  flex-wrap: wrap;         
+  justify-content: space-around;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.columna-video {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.columna-video img {
+  width: 100%;
+  max-width: 380px; 
+  border-radius: 25px;
+  margin: 15px 0;
+}
+
+.tarjeta-glass-videos h3, .tarjeta-glass-videos h4 {
+  color: white;
+  font-size: 25px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-family: "Alfa Slab One", serif;
+  margin: 5px 0;
+}
+
+.columna-video p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  max-width: 85%; 
+}
+
+/* --- MODIFICADO: Alinea el texto a la izquierda/centro y el botón a la derecha --- */
+.pie-tarjeta-video {
+  width: 100%; 
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Empuja el texto a un lado y el botón al otro */
+  align-items: center;            /* Los centra verticalmente entre sí */
+}
+
+.pie-tarjeta-video p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin: 0;
+  text-align: left; /* Queda mejor alineado al tener un botón al lado */
+}
+
+/* --- NUEVO: ESTILOS DEL BOTÓN LILA --- */
+.boton-ver-video {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #bc00dd;   /* Lila morado vibrante */
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20px;
+  padding: 12px 40px;
+  border-radius: 35px;         /* Mismo redondeado curvo que usás en la portada */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;         /* Evita que el texto se parta en dos renglones */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-ver-video:hover {
+  transform: scale(1.05);
+  background-color: #9900b5;   /* Se oscurece un toque al pasar el mouse */
+}
+
+
+/* ==========================================
+   ÚLTIMA SECCIÓN - FORMULARIO DE REGISTRO
+============================================= */
+
+.seccion-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.seccion-formulario .titulo-seccion-form {
+  align-self: flex-start;
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-weight: lighter;
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* --- LA TARJETA GLASS PRINCIPAL --- */
+.tarjeta-glass-registro {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0 50px 50px; /* 0 a la derecha para que la foto toque el borde */
+  gap: 50px;
+  overflow: hidden; /* Corta la imagen con la curva de la tarjeta */
+}
+
+/* --- FORMULARIO e INPUTS (IZQUIERDA) --- */
+.formulario-registro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.grupo-campo label {
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.grupo-campo input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3b73e3; /* Azul exacto */
+  color: white;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/* Quita flechas nativas del input de número */
+.grupo-campo input[type=number]::-webkit-inner-spin-button, 
+.grupo-campo input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* --- BOTÓN AMARILLO --- */
+.boton-quiero-ir {
+  align-self: center;
+  margin-top: 15px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  border: none;
+  background-color: #e6ff00; /* Amarillo flúor */
+  color: black;
+  font-size: 22px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.boton-quiero-ir:hover {
+  transform: scale(1.05);
+}
+
+/* --- IMAGEN PEGADA AL BORDE (DERECHA) --- */
+.columna-imagen-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.columna-imagen-form img {
+  width: 100%;
+  max-width: 500px;                      /* Evita que se haga gigante */
+  height: auto;
+  border-radius: 40px;                   /* Bordes redondeados de la imagen */
+  object-fit: cover;
+}
+
+/* --- CAPA OSCURA MODAL REAL --- */
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #ec407a, #8e24aa, #1a1a7e, #00897b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-modal.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+/* --- TARJETA FLOTANTE FEEDBACK --- */
+.tarjeta-glass-feedback {
+  position: relative;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+.boton-cerrar-x {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: none;
+  border: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.titulo-feedback {
+  font-family: "Alfa Slab One", serif;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.subtitulo-feedback {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.texto-recordatorio {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.datos-evento-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.pie-feedback {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.frase-emocion {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  max-width: 85%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.pie-pagina {
+  background-color: rgba(255, 255, 255, 0.249);
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* Centra los logos en la pantalla */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; /* Separación parejita entre cada logo */
+}
+
+.contenedor-redes a img {
+  width: 40px;  /* Controla el tamaño de los logos para que queden finos */
+  height: 40px; /* Mantiene la proporción cuadrada */
+  object-fit: contain;
+  transition: transform 0.2s ease; /* Efecto suave para el hover */
+}
+
+/* Efecto visual: cuando pasan el mouse por arriba, el logo se agranda un toque */
+.contenedor-redes a img:hover {
+  transform: scale(1.15);
+}
+
+/*@media (max-whidt:600px){
+
+}*/ /*para modificar a celular*/
