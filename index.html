@@ -1,0 +1,221 @@
+<html>
+
+    <head>
+
+        <title>pagina web Angie Velasco</title>
+        <meta charset="utf-8">
+        <meta name="languaje" content="es">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="script.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!--fuente alfa slab one -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="imagenes/marca.png" alt="macra" width="125" class="logo-marca">
+        </header>
+
+
+        <section class="portada">
+
+            <div class="izquierda-portada">  <!--seccion izquierda -->
+
+                <h1>Juntate con<br>Angie Velasco</h1>  
+
+                <h2>¿Le venderías algo a Angie? Registrate<br>y vení a intentarlo</h2>
+
+                <a href="#seccion-registro" class="boton-portada-ir">¡Quiero ir!</a>
+
+            </div>
+
+            <div class="derecha-portada"> <!--seccion derecha -->
+
+                <img src="imagenes/angie portada.png" alt="angie">
+
+                <div class="textos-derecha">
+                    <h3>Parque de la<br>independencia</h3>
+                    <h3>18 de mayo</h3>
+                    <h3>16:00 hs</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-1">
+            <h2 class="titulo-seccion-propuesta">Este mes, Angie propone un evento diferente...</h2>
+
+<div class="tarjeta-glass">
+
+    <div class="fila-tarjeta fila-arriba">
+        <h2 class="titulo-sumate">¡Sumate!</h2>
+        <p class="txt-1">En "Mis seguidores me venden sus cosas", <br> vas a poder traer objetos propios y vendérselos <br> a Angie o a alguno de sus asistentes.</p>
+        <img src="imagenes/seccion 1-2.png" class="img-1" alt="">
+    </div>
+
+    <div class="fila-tarjeta fila-abajo">
+        <img src="imagenes/seccion1.png" class="img-2" alt="">
+        <p class="txt-2">Una experiencia cercana, divertida y espontánea, donde lo importante no es lo que llevás...¡sino que la pases bien y conozcas a tu ídola!</p>
+        <h2 class="titulo-final">La vas a pasar espectacular</h2>
+    </div>
+
+</div>
+</section>
+
+<section class="seccion-2">
+
+    <h2 class="titulo-seccion">¡Reservate el dia!</h2>
+
+    <div class="disposicion-tarjetas">
+
+        <div class="tarjeta-evento"> 
+            <h2 class="pregunta-tarjeta">¿Fecha?</h2>
+            <img src="imagenes/calendario.png" alt="Calendario">
+            <h3 class="respuesta-tarjeta">Sábado 18 de mayo</h3>
+        </div>
+
+        <div class="tarjeta-evento">  
+            <h2 class="pregunta-tarjeta">¿Hora?</h2>
+            <img src="imagenes/reloj.png" alt="Reloj">
+            <h3 class="respuesta-tarjeta">16:00 hs</h3>
+        </div>
+
+        <div class="tarjeta-evento"> 
+            <h2 class="pregunta-tarjeta">¿Lugar?</h2>
+            <img src="imagenes/locacion.png" alt="Ubicación">
+            <h3 class="respuesta-tarjeta">Parque de la<br>Independencia</h3>
+        </div>
+
+    </div>
+    
+    <p class="aclaracion-menores">Si sos menor de 18 años, debés asistir acompañado/a por un adulto responsable.</p>
+        
+</section>
+
+<section class="seccion-3">
+
+    <h2 class="titulo-seccion-3 titulo-seccion-videos">¿Querés saber lo que te espera?</h2>
+
+    <div class="tarjeta-glass-videos">
+        
+        <div class="columna-video">
+            <h3>"¿Esto fue manipulación?"</h3>
+            <img src="imagenes/cap video 3.png" alt="">
+            <h4>8:56</h4>
+            <p>Un seguidor le regala a Angie un peluche gigante y luego le ofrece objetos para venderle</p>
+        </div> 
+
+        <div class="columna-video">
+            <h3>"Por fin me lo saco de encima."</h3>
+            <img src="imagenes/cap video 2.png" alt="">
+            <h4>3:55</h4>
+            <p>Una seguidora logra vender un objeto que no queria tener mas en su casa</p>
+        </div>
+
+        <div class="pie-tarjeta-video">
+            <p>¡No te lo podes perder! Mirá el video recap de mi último evento organizado.</p>
+            <a href="https://youtu.be/cLeZ07eTXZM?si=2YuXJI8Gx6exYVhN" target="_blank" rel="noopener noreferrer" class="boton-ver-video">
+                Ver video
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="seccion-formulario" id="seccion-registro">
+
+    <h2 class="titulo-seccion-form">¡Preparate para conocerla!</h2>
+
+    <div class="tarjeta-glass-registro">
+        
+        <form class="formulario-registro">
+            <div class="grupo-campo">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" min="0" max="120" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="objeto">Objeto</label>
+                <input type="text" id="objeto" name="objeto" required>
+            </div>
+
+            <button type="submit" class="boton-quiero-ir">¡Quiero ir!</button>
+        </form>
+
+        <div class="columna-imagen-form">
+            <img src="imagenes/angie.formulario.jpeg" alt="Angie Velasco">
+        </div>
+
+    </div>
+
+</section>
+
+<div id="modal-feedback" class="overlay-modal">
+    <div class="tarjeta-glass-feedback">
+        
+        <button type="button" class="boton-cerrar-x" id="btn-cerrar-x">X</button>
+
+        <h2 class="titulo-feedback">¡Confirmación exitosa <span id="nombre-usuario"></span>!</h2>
+        <h3 class="subtitulo-feedback">Recibimos tu registro para el evento de Angie Velasco</h3>
+        
+        <p class="texto-recordatorio">Te va a llegar un recordatorio al correo <strong id="correo-usuario"></strong> con los siguientes datos:</p>
+        
+        <div class="datos-evento-feedback">
+            <p>📍 Parque de la Independencia</p>
+            <p>📅 Sábado 18 de mayo</p>
+            <p>🕒 16:00 hs</p>
+        </div>
+
+        <div class="pie-feedback">
+            <p class="frase-emocion">Estamos muy emocionados de verte ahí. ¡Prepará tus mejores objetos para vender!</p>
+        </div>
+
+    </div>
+</div>
+
+      <footer class="pie-pagina">
+    <div class="contenedor-redes">
+        
+        <a href="https://www.instagram.com/angievelasco08?igsh=MTRtN2Nva3RmMDExMQ==" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/instagram-logo.png" alt="Instagram">
+        </a>
+
+        <a href="https://www.youtube.com/@AngieVelasco" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/Youtube_logo.png" alt="YouTube">
+        </a>
+
+        <a href="https://www.tiktok.com/@angievelasco98?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/tiktok-logo.jpg" alt="TikTok">
+        </a>
+
+        <a href="https://x.com/AngieVelasco08" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/x-logo.avif" alt="X Twitter">
+        </a>
+
+    </div>
+</footer>
+
+    </body>
+</html>

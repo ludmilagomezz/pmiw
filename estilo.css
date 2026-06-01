@@ -1,0 +1,1239 @@
+body{
+
+/*fondo degrade*/
+
+min-height: 100vh;
+margin: 0px;
+background: radial-gradient(circle, #ec407a, #8e24aa, #1a1a7e, #00897b);
+background-attachment: fixed;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.249);
+}
+
+.logo-marca{
+    margin: 0 30px;
+}
+
+
+.portada {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente bloque izquierdo y bloque derecho */
+  margin: 30px;
+  padding: 20px;
+}
+
+/* --- COLUMNA IZQUIERDA (Textos y Botón) --- */
+.izquierda-portada {
+  width: 45%;
+  display: flex;
+  flex-direction: column;   /* Alinea h1, h2 y botón uno abajo del otro nativamente */
+  align-items: flex-start;  /* Tira todo hacia la izquierda */
+  gap: 50px;                /* Controla la separación entre los elementos */
+}
+
+.izquierda-portada h1 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  color: white;
+  font-size: 80px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.izquierda-portada h2 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  color: white;
+  font-size: 26px; /* Bajado un toque para que no compita tanto con el h1 gigante */
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- COLUMNA DERECHA (Foto y Datos del evento) --- */
+.derecha-portada {
+  width: 50%;
+  display: flex;
+  flex-direction: row;      /* Foto al lado de los textos */
+  align-items: center;      /* Centra verticalmente la foto con los textos */
+  gap: 10px;                /* Espacio de separación real entre foto y textos */
+}
+
+.derecha-portada img {
+  width: 100%;
+  max-width: 500px;         /* Tamaño controlado para que no tape los textos */
+  height: auto;
+}
+
+.textos-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;                /* Separación parejita entre cada h3 */
+}
+
+.textos-derecha h3 {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* --- BOTÓN DE LA PORTADA --- */
+.boton-portada-ir {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e6ff00; /* Amarillo flúor */
+  font-family: sans-serif;
+  color: black;
+  font-size: 24px;
+  padding: 15px 50px;
+  border-radius: 35px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;          /* Separación controlada respecto al h2 */
+  transition: transform 0.2s ease;
+}
+
+.boton-portada-ir:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.seccion-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
+}
+/* --- TÍTULO DE AFUERA DE LA CARD --- */
+.seccion-1 > h2 {
+  align-self: flex-start; 
+  color: white;
+  font-weight: lighter;
+  font-family: "Alfa Slab One", serif;
+  font-size: 35px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;    
+  margin-left: 2.5%;     /*ajustar titulo a tarjeta */
+}
+
+/* --- TARJETA  --- */
+.tarjeta-glass {
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  
+  display: flex;
+  flex-direction: column; /* Una fila arriba de la otra */
+  gap: 50px;             /* Separación entre la fila de arriba y la de abajo */
+  padding: 40px 40px;    /* Un poco más de padding arriba/abajo por los títulos */
+}
+
+/* --- ESTRUCTURA GENERAL DE LAS FILAS --- */
+.fila-tarjeta {
+  position: relative;    /* ¡CLAVE! Hace que los "absolute" de los títulos se midan desde acá adentro */
+  display: flex;
+  flex-direction: row;
+  align-items: center;   /* Centra verticalmente la foto y el texto */
+  width: 100%;
+  height: 250px;         /* Le damos una altura fija para poder usar "top" y "bottom" cómodamente */
+}
+
+/* --- FILA DE ARRIBA: Todo tirado a la derecha --- */
+.fila-arriba {
+  justify-content: flex-end; /* Empuja el texto y la foto a la derecha */
+  text-align: right;
+}
+.fila-arriba p, .fila-arriba img {
+  max-width: 35%;          /* Controlamos que no ocupen más de la mitad de la pantalla */
+  margin-left: 20px;       /* Separación entre el texto y la foto */
+}
+
+/* --- FILA DE ABAJO: Todo tirado a la izquierda --- */
+.fila-abajo {
+  justify-content: flex-start; /* Empuja la foto y el texto a la izquierda */
+}
+.fila-abajo img, .fila-abajo p {
+  max-width: 25%;
+  margin-right: 15px;      /* Separación entre la foto y el texto */
+}
+
+/* --- DISEÑO GENERAL DE IMÁGENES Y TEXTOS --- */
+.tarjeta-glass img { height: 100%; width: auto; border-radius: 20px; object-fit: cover; }
+.tarjeta-glass p { color: white;  font-family: sans-serif; font-size: 20px; }
+.tarjeta-glass h2 { color: white; font-family: "Alfa Slab One", serif; font-size: 35px; font-weight: lighter; margin: 0; text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-sumate {
+  position: absolute;
+  top: 90px;        /* Cambiá este número para subirlo o bajarlo */
+  left: 190px;       /* Cambiá este número para moverlo a la izquierda o derecha */
+}
+
+.titulo-final {
+  position: absolute;
+  bottom: 100px;     /* Lo medimos desde abajo para que sea más fácil */
+  right: 50px;      /* Lo medimos desde la derecha para acomodarlo al final */
+}
+
+
+
+
+.seccion-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centra el título de la sección y el párrafo de abajo */
+  margin: 30px 0;         /* ¡CORREGIDO! 0 a los costados para usar todo el ancho de la pantalla */
+  padding: 20px;
+  width: 100%;            /* Fuerza a la sección a expandirse horizontalmente */
+  box-sizing: border-box; /* Evita que el padding rompa el ancho total */
+}
+
+/* Título principal de afuera */
+.seccion-2 .titulo-seccion {
+  align-self: flex-start;  /* Se alinea a la izquierda como en tu diseño */
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-weight: lighter;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;      /* Pequeño margen para que no pegue al borde absoluto */
+}
+
+/* --- FILA CONTENEDORA DE LAS TARJETAS --- */
+.disposicion-tarjetas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribuye el espacio entre las 3 de forma pareja */
+  width: 100%;            /* Ocupa el 100% de la sección liberada */
+  gap: 30px;              /* Distancia exacta entre tarjeta y tarjeta */
+  margin-bottom: 40px;    /* Separa las tarjetas del texto de menores de abajo */
+  padding: 0 20px;        /* Margen interno para que no toquen los bordes del monitor */
+  box-sizing: border-box;
+}
+
+/* --- ESTILO ÚNICO PARA LAS 3 TARJETAS --- */
+.tarjeta-evento {
+  flex: 1;                /* ¡CORREGIDO! Obliga a las 3 a estirarse a lo ancho por igual */
+  height: 450px;          /* Mantiene el alto que a vos te funcionó bien */
+  
+  background: rgba(255, 255, 255, 0.15); /* Estilo Glassmorphism */
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  /* Flexbox vertical interno para centrar el contenido de cada card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinea los textos a los extremos y la foto al centro */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Control de las imágenes dentro de las tarjetas */
+.tarjeta-evento img {
+  width: 160px;           /* Tamaño ideal para que entren bien los dos textos */
+  height: auto;
+}
+
+/* --- CONTROL INDEPENDIENTE DE TEXTOS DENTRO DE LAS CARDS --- */
+
+/* ¿Fecha?, ¿Hora?, ¿Lugar?) */
+.pregunta-tarjeta {
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-size: 28px;      
+  font-weight: lighter;  
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* Sábado 18, 16:00hs, parque */
+.respuesta-tarjeta {
+  font-family: "Alfa Slab One", serif; 
+  color: white;
+  font-size: 22px;      
+  font-weight: lighter;  
+  text-align: center;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* --- PÁRRAFO DE MENORES (ABAJO Y CENTRADO) --- */
+.aclaracion-menores {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+/* --- CONTENEDOR GENERAL (Igualado a la Sección 2) --- */
+.seccion-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titulo-seccion-3 {
+  align-self: flex-start;
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.tarjeta-glass-videos {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  display: flex;
+  flex-direction: row;     
+  flex-wrap: wrap;         
+  justify-content: space-around;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.columna-video {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.columna-video img {
+  width: 100%;
+  max-width: 380px; 
+  border-radius: 25px;
+  margin: 15px 0;
+}
+
+.tarjeta-glass-videos h3, .tarjeta-glass-videos h4 {
+  color: white;
+  font-size: 25px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-weight: lighter;
+  font-family: "Alfa Slab One", serif;
+  margin: 5px 0;
+}
+
+.columna-video p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  max-width: 85%; 
+}
+
+/* --- MODIFICADO: Alinea el texto a la izquierda/centro y el botón a la derecha --- */
+.pie-tarjeta-video {
+  width: 100%; 
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Empuja el texto a un lado y el botón al otro */
+  align-items: center;            /* Los centra verticalmente entre sí */
+}
+
+.pie-tarjeta-video p {
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin: 0;
+  text-align: left; /* Queda mejor alineado al tener un botón al lado */
+}
+
+/* --- BOTÓN LILA --- */
+.boton-ver-video {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #bc00dd;   /* Lila morado vibrante */
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20px;
+  padding: 12px 40px;
+  border-radius: 35px;         /* Mismo redondeado curvo que usás en la portada */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;         /* Evita que el texto se parta en dos renglones */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-ver-video:hover {
+  transform: scale(1.05);
+  background-color: #9900b5;   /* Se oscurece un toque al pasar el mouse */
+}
+
+
+
+
+
+
+.seccion-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.seccion-formulario .titulo-seccion-form {
+  align-self: flex-start;
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  font-weight: lighter;
+  font-size: 35px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* --- LA TARJETA GLASS PRINCIPAL --- */
+.tarjeta-glass-registro {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0 50px 50px; /* 0 a la derecha para que la foto toque el borde */
+  gap: 50px;
+  overflow: hidden; /* Corta la imagen con la curva de la tarjeta */
+}
+
+/* --- FORMULARIO e INPUTS (IZQUIERDA) --- */
+.formulario-registro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.grupo-campo label {
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.grupo-campo input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3b73e3; 
+  color: white;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/* Quita flechas nativas del input de número */
+.grupo-campo input[type=number]::-webkit-inner-spin-button, 
+.grupo-campo input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.boton-quiero-ir {
+  align-self: center;
+  margin-top: 15px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  border: none;
+  background-color: #e6ff00; 
+  color: black;
+  font-size: 22px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.boton-quiero-ir:hover {
+  transform: scale(1.05);
+}
+
+/* --- IMAGEN PEGADA AL BORDE (DERECHA) --- */
+.columna-imagen-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.columna-imagen-form img {
+  width: 100%;
+  max-width: 500px;                      
+  height: auto;
+  border-radius: 40px;                  
+  object-fit: cover;
+}
+
+/* --- CAPA OSCURA MODAL REAL --- */
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #ec407a, #8e24aa, #1a1a7e, #00897b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-modal.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- FEEDBACK --- */
+
+.tarjeta-glass-feedback {
+  position: relative;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+.boton-cerrar-x {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: none;
+  border: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.titulo-feedback {
+  font-family: "Alfa Slab One", serif;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.subtitulo-feedback {
+  font-family: "Alfa Slab One", serif;
+  font-weight: lighter;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.texto-recordatorio {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.datos-evento-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.pie-feedback {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.frase-emocion {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  max-width: 85%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pie-pagina {
+  background-color: rgba(255, 255, 255, 0.249);
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* Centra los logos en la pantalla */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; /* Separación parejita entre cada logo */
+}
+
+.contenedor-redes a img {
+  width: 40px;  /* Controla el tamaño de los logos para que queden finos */
+  height: 40px; /* Mantiene la proporción cuadrada */
+  object-fit: contain;
+  transition: transform 0.2s ease; /* Efecto suave para el hover */
+}
+
+/* Efecto visual: cuando pasan el mouse por arriba, el logo se agranda un toque */
+.contenedor-redes a img:hover {
+  transform: scale(1.15);
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* --- 0. CONTROL DE ANCHO GLOBAL (Evita desbordes a la derecha) --- */
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* --- 1. PORTADA --- */
+.portada {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;       
+    text-align: center;        
+    margin: 15px 0;            /* Reducido un toque el margen superior general */
+    padding: 0 15px;           
+    gap: 12px;                 /* ¡CABLE CLAVE! Reduce la separación entre el bloque de textos y la foto de Angie */
+    width: 100%;
+  }
+
+  .izquierda-portada {
+    width: 100%;               
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    gap: 25px;                  /* Controla directamente la distancia exacta entre el h1 y el h2 */
+  }
+
+  .izquierda-portada h1 {
+    font-size: 32px;           
+    line-height: 1.0;          /* Achicamos el interlineado para que el texto sea más compacto si ocupa dos renglones */
+    margin: 0 !important;      /* Resetea cualquier margen residual que use el navegador por defecto */
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);       
+  }
+
+  .izquierda-portada h2 {
+    font-size: 16px;
+    line-height: 1.2;          /* Interlineado más compacto */
+    margin: 0 !important;      /* Eliminamos los márgenes por defecto para que obedezca al gap del padre */
+    max-width: 90%;            
+    text-shadow: 5px 3px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Contenedor relativo para poder posicionar los textos encima de la foto */
+  .derecha-portada {
+    position: relative;       
+    width: 100%;               
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .derecha-portada img {
+    width: 100%;
+    max-width: 290px;          /* Dimensión ideal para el ancho de 350px */
+    height: auto;
+    display: block;
+  }
+
+  /* Los datos del evento pasan a estar flotando arriba a la derecha de la foto */
+  .textos-derecha {
+    position: absolute;
+    top: 20px;                 /* Distancia desde el borde superior de la foto */
+    right: 25px;               /* Posicionado sobre su hombro derecho (izq de la pantalla) */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;                  /* Datos bien compactos */
+    text-align: right;         /* Alineación prolija hacia el lateral */
+    font-weight: lighter;
+    width: auto;
+    padding: 8px 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+  }
+
+  .textos-derecha h3 {
+    font-size: 13px;         
+    color: #ffffff;
+    margin: 0 !important;
+    line-height: 1.2;
+    font-weight: lighter;
+    text-shadow: 5px 3px 0px rgba(0, 0, 0, 0.25);  
+  }
+
+/* --- SECCIÓN 1--- */
+
+  .seccion-1 {
+    width: 85%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo-seccion-propuesta {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25); 
+    text-align: left !important;
+    width: 100%;               /* Se limita al ancho de la sección */
+    max-width: 100%;           /* Candado estricto para el margen derecho */
+    margin: 25px 0 15px 0 !important;
+    font-weight: lighter;
+    box-sizing: border-box;
+  }
+
+  /* Este es el contenedor que va a permitir el deslizamiento lateral */
+  .tarjeta-glass {
+    display: flex;
+    flex-direction: row;       /* Ponemos las dos tarjetas una al lado de la otra */
+    overflow-x: auto;          /* Activa el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Hace que "pestañee" y frene perfecto en cada tarjeta */
+    width: 100%;
+    gap: 30px;                 /* Separación prolija entre la tarjeta 1 y la 2 */
+    padding: 10px 5px 25px 5px; 
+    margin: 10px 0 !important;
+    background: none !important; /* Limpiamos fondos raros del contenedor padre */
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    -webkit-overflow-scrolling: touch; /* Suavizado táctil para iPhones */
+  }
+
+  /* Ocultamos la barra de scroll para que visualmente quede impecable */
+  .tarjeta-glass::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Cada una de tus 2 tarjetas individuales */
+  .fila-tarjeta {
+    flex: 0 0 calc(100% - 10px); 
+    scroll-snap-align: center; 
+    display: flex;
+    flex-direction: column !important; 
+    
+    /* Alineación de tu código base */
+    align-items: flex-start !important; 
+    text-align: left !important;
+    
+    /* Control de alto: Le damos el largo extra que pediste para que entre todo bien */
+    min-height: 520px !important;
+    height: auto !important;
+    
+    /* Estilo de la captura */
+    background: rgba(255, 255, 255, 0.08) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 24px;
+    padding: 24px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-sizing: border-box;
+  }
+
+  /* Los títulos H2 internos de cada tarjeta ("¡Sumate!" / "La vas a pasar...") */
+ .fila-tarjeta h2, 
+  .titulo-sumate, 
+  .titulo-final {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    text-shadow: none !important; 
+    
+    /* ENFOQUE ABSOLUTO: Centrado horizontal matemático e irrompible */
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Lo centra perfectamente respecto a la tarjeta */
+    text-align: center !important; /* Fuerza a que el texto se renderice desde el medio */
+    width: 90% !important; /* Evita que toque los bordes del vidrio */
+    box-sizing: border-box !important;
+  }
+
+  /* UBICACIÓN ESPECÍFICA PARA EL PRIMER H2 (¡Sumate!) */
+  .titulo-sumate,
+  .fila-tarjeta:first-child h2 {
+    top: 25px !important; /* Lo clava en la parte de arriba de su tarjeta */
+    bottom: auto !important;
+  }
+
+  /* UBICACIÓN ESPECÍFICA PARA EL SEGUNDO H2 (La vas a pasar espectacular) */
+  .titulo-final,
+  .fila-tarjeta:last-child h2 {
+    bottom: 25px !important; /* Lo clava en la parte de abajo de su tarjeta */
+    top: auto !important;
+  }
+
+  /* Forzamos el orden de las subestructuras internas a la izquierda */
+  .fila-arriba, .fila-abajo {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Alineado a la izquierda */
+    width: 100%;
+  }
+
+  /* Ajuste de las imágenes dentro de las tarjetas */
+  .fila-tarjeta img {
+    width: 100% !important;
+    max-width: 100%;          
+    height: 165px !important;  /* Altura fija idéntica para que queden simétricas */
+    border-radius: 16px;
+    object-fit: cover !important; /* Mantiene la foto prolija sin deformar */
+    margin: 0 0 15px 0 !important;
+    order: -1; /* Tu orden original que clava la foto en el medio */
+  }
+
+  /* Ajuste de los párrafos descriptorios */
+  .fila-tarjeta p {
+    font-size: 15px !important;
+    line-height: 1.4;
+    color: #f0f0f0;
+    margin: 0 !important;
+    max-width: 100%;
+    text-align: left !important;
+  }
+
+/* --- SECCIÓN 2 --- */
+
+.seccion-2 {
+    width: 100%;                
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important; 
+    box-sizing: border-box;
+  }
+
+ .seccion-2 .titulo-seccion {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25) !important;
+    text-align: left !important;
+    width: 100% !important;               
+    max-width: 100% !important;           
+    margin: 25px 0 15px 0 !important;
+    font-weight: lighter !important;
+    box-sizing: border-box !important;
+  }
+
+  /* El contenedor principal de las 3 tarjetas */
+  .disposicion-tarjetas {
+    display: flex !important;
+    flex-direction: column !important; 
+    /* CAMBIO CLAVE 2: Fuerza a las tarjetas a alinearse a la izquierda, rompiendo el centrado */
+    align-items: flex-start !important;    
+    width: 100% !important;
+    gap: 22px !important;              
+    margin: 10px 0 !important;
+  }
+
+  /* LAS CARDS: Tamaño idéntico, fijo y alineado */
+  .tarjeta-evento {
+    display: flex !important;
+    flex-direction: row !important;    
+    align-items: center !important;    
+    justify-content: flex-start !important;
+    
+    width: 100% !important;
+    max-width: 340px !important;       
+    min-height: 140px !important;      
+    height: 140px !important;
+    
+    background: rgba(255, 255, 255, 0.08) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 32px !important;       
+    padding: 15px 22px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  /* LAS IMÁGENES (ICONOS 3D): Control estricto a la izquierda */
+  .tarjeta-evento img {
+    flex: 0 0 55px !important;         
+    width: 55px !important;
+    height: 55px !important;           
+    object-fit: contain !important;
+    margin: 0 20px 0 0 !important;     
+    display: block !important;
+  }
+
+  /* CONTENEDOR INTERNO DE TEXTOS */
+  .tarjeta-evento h2.pregunta-tarjeta,
+  .tarjeta-evento h3.respuesta-tarjeta {
+    text-align: left !important;
+    color: #ffffff !important;
+    font-weight: lighter !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25) !important;    
+    margin: 0 !important;
+    width: calc(100% - 100px) !important;
+  }
+
+  /* LA PREGUNTA (¿Fecha?, ¿Hora?, ¿Lugar?) */
+  .pregunta-tarjeta {
+    position: absolute !important;
+    top: 30px !important;              
+    left: 85px !important;             /* Mantiene tu estructura de capas pero más junta al icono */
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  /* LA RESPUESTA (Sábado 18, 16:00 hs, etc.) */
+  .respuesta-tarjeta {
+    position: absolute !important;
+    bottom: 30px !important;           
+    left: 85px !important;             
+    font-size: 15.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* TEXTO INFERIOR DE ACLARACIÓN */
+  .aclaracion-menores {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    color: #ffffff !important;
+    /* Mantenemos el texto centrado abajo de todo el bloque */
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 15px 0 0 0 !important;
+  }
+
+  /* --- SECCIÓN 3 --- */
+
+.seccion-3 {
+  width: 85% !important;
+  margin: 25px !important;
+  margin-bottom: 140px !important;
+  padding: 0 10px 30px 10px !important; /* <--- MODIFICADO: Agrega 30px abajo para dar aire al botón */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  height: auto !important;             /* <--- MODIFICADO: Cambiado de min-height a auto para que crezca libre y no tape nada */
+  box-sizing: border-box !important;
+}
+
+  /* 1. EL CONTENEDOR PADRE (Solo activa el scroll horizontal) */
+ .seccion-3 .tarjeta-glass-videos {
+    display: flex !important;
+    flex-direction: row !important;      /* <--- AGREGADO: Asegura el sentido horizontal */
+    flex-wrap: nowrap !important;        /* <--- AGREGADO CRUCIAL: Prohíbe que las tarjetas se vayan para abajo */
+    overflow-x: auto !important;             
+    scroll-snap-type: x mandatory !important;
+    width: 100% !important;
+    gap: 20px !important; 
+    padding: 15px 0 !important; 
+    margin: 10px 0 !important;
+    background: none !important; 
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-overflow-scrolling: touch !important; 
+    box-sizing: border-box !important;
+  }
+  .seccion-3 .tarjeta-glass-videos::-webkit-scrollbar {
+    display: none !important;
+  }
+
+ .seccion-3 .titulo-seccion-videos {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25) !important;
+    
+    /* Alineación absoluta a la izquierda */
+    text-align: left !important;
+    align-self: flex-start !important; 
+    
+    /* Reseteo de márgenes y paddings intrusos */
+    margin: 25px 0 15px 0 !important; /* Forzamos solo margen arriba y abajo, CERO a los costados */
+    padding: 0 !important;             /* Eliminamos cualquier espacio interno que lo empuje */
+    
+    width: 100% !important;               
+    max-width: 100% !important;           
+    font-weight: lighter !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. LAS TARJETAS DE VIDEO (Ampliadas al 100% de ancho) */
+.seccion-3 .columna-video {
+  flex: 0 0 100% !important;      /* <--- REVISÁ ACÁ: Quitá los comentarios (/*) para que el navegador lo lea */
+  min-width: 100% !important;  /* <--- AGREGÁ ESTO: Obliga a la tarjeta a medir todo el ancho de la pantalla */
+  scroll-snap-align: center !important; 
+  display: flex !important;
+  flex-direction: column !important; 
+  align-items: center !important; 
+  text-align: center !important;  
+  height: 380px !important;       /* <--- NOTA: Te subí de 400px a 480px para que el texto largo no se desborde */
+  padding: 24px 20px !important;
+  background: rgba(255, 255, 255, 0.08) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(16px) !important;
+  box-sizing: border-box !important;
+}
+
+  /* Títulos de los videos */
+  .seccion-3 .columna-video h3 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25); 
+    margin: 0 0 15px 0 !important;
+  }
+
+  /* Imágenes de los videos */
+  .seccion-3 .columna-video img {
+    width: 100% !important;
+    border-radius: 16px !important;
+    object-fit: cover !important; 
+    margin: 0 0 12px 0 !important;
+  }
+
+  /* H4 y P */
+  .seccion-3 .columna-video h4 {
+    font-size: 15px !important;
+    color: #e0e0e0 !important;
+    margin: 0 0 10px 0 !important;
+    font-weight: lighter !important;
+  }
+
+  .seccion-3 .columna-video p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    color: #f0f0f0 !important;
+    margin: 0 !important;
+  }
+
+  /* PIE DE TARJETA */
+  .seccion-3 .pie-tarjeta-video {
+    position: absolute !important;
+    bottom: -100px !important; 
+    left: 50% !important;
+    transform: translateX(-50%) !important; 
+    width: 90% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .seccion-3 .pie-tarjeta-video p {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  /* Botón "Ver video" */
+  .seccion-3 .boton-ver-video {
+    display: inline-block !important;
+    padding: 12px 35px !important;
+    background-color: #bc00dd !important; 
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: lighter !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+  }
+
+  /* ---FORMULARIO--- */
+
+ .seccion-formulario {
+    padding: 0 35px !important; /* <--- MODIFICADO: Un poquito más de margen a los costados */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+.seccion-formulario .titulo-seccion-form {
+    font-size: 26px !important; /* Mantiene tu ajuste fino para celulares */
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25) !important;
+    
+    /* Alineación exacta a la izquierda */
+    text-align: left !important;
+    align-self: flex-start !important; /* Rompe el centrado y lo tira a la izquierda */
+    
+    /* Control total de márgenes y paddings */
+    margin: 25px 0 15px 0 !important; /* Forzamos espacio arriba y abajo, CERO a los lados */
+    padding: 0 !important;
+    
+    width: 100% !important;               
+    max-width: 100% !important;           
+    font-weight: lighter !important;
+    box-sizing: border-box !important;
+  }
+
+  .tarjeta-glass-registro {
+    flex-direction: column !important; 
+    padding: 35px 24px !important;   /* <--- MODIFICADO: Más aire interno para que respire la tarjeta */
+    gap: 25px !important;
+    width: 100% !important;
+    margin: 20px 0 !important;       /* <--- MODIFICADO: Controla el margen arriba y abajo de la tarjeta */
+    box-sizing: border-box !important;
+  }
+
+  /* --- CONTROL DE LOS INPUTS (Espacios para completar) --- */
+  .formulario-registro label {
+    display: block !important;
+    margin-bottom: 3px !important;   /* <--- AGREGADO: Separa el texto ("Nombre y Apellido") de su cajita */
+    font-size: 15px !important;
+  }
+
+  .formulario-registro input {
+    width: 100% !important; 
+    height: 42px !important;          /* <--- AGREGADO: Achica la altura de los espacios para completar */
+    /*padding: 0px 5px !important;   /* Ajuste interno para que el texto escrito no quede pegado */
+    margin-bottom: 2px !important;  /* <--- AGREGADO: Da un margen prolijo entre el input anterior y el próximo label */
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- CONTROL DEL BOTÓN (Más chico) --- */
+  .boton-quiero-ir {
+    display: block !important;
+    align-self: center !important;        
+    width: auto !important;          /* <--- MODIFICADO: Le saca el 100% para que no sea gigante */
+    min-width: 180px !important;     /* <--- AGREGADO: Le da un ancho mínimo ideal para el dedo en mobile */
+    padding: 12px 30px !important;   /* <--- AGREGADO: Regula el tamaño interno del botón */
+    margin: 10px auto 0 auto !important; /* <--- AGREGADO: Lo centra horizontalmente respecto al formulario */
+    text-align: center !important;
+    font-size: 16px !important;
+  }
+
+  /* --- LO DEMÁS SE MANTIENE LIMPIO --- */
+  .columna-imagen-form {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .columna-imagen-form img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 30px !important; 
+  }
+
+  .formulario-registro {
+    width: 100% !important;
+  }
+
+  .seccion-formulario .titulo-seccion-form {
+    font-size: 26px !important; 
+    margin-bottom: 20px !important;
+  }
+
+  /* --- 4. CARTEL DE CONFIRMACIÓN (MODAL) --- */
+.tarjeta-glass-feedback {
+    padding: 30px 20px !important;
+    width: 80% !important;        
+    margin: 25px auto !important; 
+    box-sizing: border-box !important;
+  }
+
+  .titulo-feedback { 
+    font-size: 22px !important; 
+  }
+  
+  .subtitulo-feedback { 
+    font-size: 16px !important; 
+  }
+
+  /* NUEVO: Colocalo justo acá abajo */
+  .tarjeta-glass-feedback p, 
+  .tarjeta-glass-feedback span, 
+  .tarjeta-glass-feedback strong {
+    font-size: 16px !important;   /* <--- Modificá este número para cambiar el tamaño */
+    line-height: 1.4 !important;
+  }
+
+  .frase-emocion { 
+    max-width: 100% !important; 
+  }
+}
